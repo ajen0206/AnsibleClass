@@ -14,7 +14,7 @@
     - name: Install Packages
       ansible.builtin.package:
         name: "{{ package }}"
-        state: 
+        state: present
 
     - name: Enable httpd service
       ansible.builtin.systemd:
