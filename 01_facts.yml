@@ -11,6 +11,14 @@
       ansible.builtin.debug:
         msg: "{{ ansible_facts['nodename'] }}"
 
-    - name: test
+    - name: Dot test
       ansible.builtin.debug:
         msg: "{{ ansible_facts.nodename }}"
+
+    - name: Debug Facts ipv4 - List
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts['all_ipv4_addresses'][0] }}"
+
+    - name: Debug Facts SeLinux Status - Dictionary
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts['selinux']['status'] }}"
